@@ -39,9 +39,6 @@ public class Main {
                     searchItem();
                     break;
                 case 6:
-                    processArrayList();
-                    break;
-                case 7:
                     quit = true;
                     break;
             }
