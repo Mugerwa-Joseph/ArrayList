@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class Main {
 
+	//Scanner class to get user input from the keyboard
     private static Scanner scan = new Scanner(System.in);
     private static GroceryList groceryList = new GroceryList();
     public static void main(String[] args) {
