@@ -3,7 +3,13 @@ package com.jose;
 import java.util.ArrayList;
 
 public class GroceryList {
-    private ArrayList<String> groceryList = new ArrayList<>();
+	
+	@Andylibs(author = "andylibs", language = "javascript enthusiat", email = "")
+	
+	/**
+	 * @School of computing and Informatics
+	 */
+	private ArrayList<String> groceryList = new ArrayList<>();
 
 
     public void addGroceryItem (String item){
@@ -15,16 +21,24 @@ public class GroceryList {
         return groceryList;
     }
 
+
     public void printGroceryList (){
 
         System.out.println("You have " + groceryList.size() + " Items on your list");
 
+		/**
+		 * Iterating through the array list
+		 */
         for (int i =0; i<groceryList.size(); i++){
 
             System.out.println((i+1) + "." + groceryList.get(i));
         }
     }
 
+	/**
+	 * @param currentItem
+	 * @param newItem
+	 */
     public void modifyGroceryItem (String currentItem,String newItem){
         int position = findItem(currentItem);
 
@@ -35,6 +49,10 @@ public class GroceryList {
 
     }
 
+	/**
+	 * @param position
+	 * @param newItem
+	 */
     private void modifyGroceryItem (int position, String newItem){
         groceryList.set(position, newItem);
         System.out.println("Grocery Item " + (position+1) + " has been modified");
@@ -52,11 +70,19 @@ public class GroceryList {
 
     }
 
+	/**
+	 * @param position the item index
+	 * @Array index begins from zero '0'
+	 */
     private void removeGroceryItem (int position){
         groceryList.remove(position);
 
     }
 
+	/**
+	 * @param searchItem search item by index
+	 * @return value
+	 */
     private int findItem (String searchItem){
 
        return groceryList.indexOf(searchItem);
